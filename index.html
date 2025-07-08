@@ -1,0 +1,2130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Tanisha Rampersad</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#4F46E5", secondary: "#10B981" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      }
+      @media (max-width: 640px) {
+      .container {
+      padding-left: 16px;
+      padding-right: 16px;
+      }
+      h1 {
+      font-size: calc(1.5rem + 2vw);
+      word-wrap: break-word;
+      }
+      h2 {
+      font-size: calc(1.2rem + 1vw);
+      }
+      .skill-progress {
+      margin-bottom: 1rem;
+      }
+      .process-step:not(:last-child)::after {
+      display: none;
+      }
+      }
+      @media (min-width: 641px) and (max-width: 1024px) {
+      .container {
+      padding-left: 24px;
+      padding-right: 24px;
+      }
+      h1 {
+      font-size: calc(2rem + 1.5vw);
+      }
+      h2 {
+      font-size: calc(1.5rem + 0.5vw);
+      }
+      }
+      @media (hover: none) {
+      .hover-target:hover {
+      transform: none !important;
+      }
+      .project-card:hover img {
+      transform: none;
+      }
+      }
+      @supports (-webkit-touch-callout: none) {
+      .min-h-screen {
+      min-height: -webkit-fill-available;
+      }
+      }
+      .cursor-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #4F46E5;
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s ease;
+      }
+      .cursor-outline {
+      width: 40px;
+      height: 40px;
+      border: 2px solid rgba(79, 70, 229, 0.3);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease;
+      }
+      .hover-target:hover ~ .cursor-outline {
+      width: 60px;
+      height: 60px;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #4F46E5;
+      border-radius: 10px;
+      }
+      .project-card:hover .project-overlay {
+      opacity: 1;
+      }
+      .project-card {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+      .project-card:hover img {
+      transform: scale(1.05);
+      }
+      input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #4F46E5;
+      cursor: pointer;
+      }
+      input[type="checkbox"]:not(#consent) {
+      display: none;
+      }
+      .custom-checkbox {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 4px;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.2s;
+      }
+      input[type="checkbox"]:checked + .custom-checkbox {
+      background: #4F46E5;
+      border-color: #4F46E5;
+      }
+      input[type="checkbox"]:checked + .custom-checkbox::after {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 2px;
+      width: 6px;
+      height: 12px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      }
+      .process-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 50px;
+      right: -50%;
+      width: 100%;
+      height: 2px;
+      background: #e5e7eb;
+      z-index: -1;
+      }
+      .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+      }
+      .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      }
+      .toggle-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #e2e8f0;
+      transition: .4s;
+      border-radius: 34px;
+      }
+      .toggle-slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+      }
+      input:checked + .toggle-slider {
+      background-color: #4F46E5;
+      }
+      input:checked + .toggle-slider:before {
+      transform: translateX(26px);
+      }
+      .skill-progress {
+      height: 6px;
+      background-color: #e5e7eb;
+      border-radius: 3px;
+      overflow: hidden;
+      }
+      .skill-progress-bar {
+      height: 100%;
+      background-color: #4F46E5;
+      border-radius: 3px;
+      transition: width 1s ease-in-out;
+      }
+      @keyframes fadeInUp {
+      from {
+      opacity: 0;
+      transform: translateY(20px);
+      }
+      to {
+      opacity: 1;
+      transform: translateY(0);
+      }
+      }
+      .animate-fadeInUp {
+      animation: fadeInUp 0.6s ease-out forwards;
+      }
+      .section {
+      opacity: 0;
+      }
+      .section.visible {
+      opacity: 1;
+      transition: opacity 0.8s ease-out;
+      }
+    </style>
+  </head>
+  <body class="bg-white custom-scrollbar">
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full bg-white bg-opacity-90 backdrop-blur-sm z-50 shadow-sm"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-['Pacifico'] text-primary hover-target"
+          >Tanisha</a
+        >
+        <div class="hidden md:flex space-x-8 items-center">
+          <a
+            href="#work"
+            class="text-gray-700 hover:text-primary transition-colors duration-300 hover-target"
+            >Work</a
+          >
+          <a
+            href="#about"
+            class="text-gray-700 hover:text-primary transition-colors duration-300 hover-target"
+            >About</a
+          >
+          <a
+            href="#process"
+            class="text-gray-700 hover:text-primary transition-colors duration-300 hover-target"
+            >Process</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-700 hover:text-primary transition-colors duration-300 hover-target"
+            >Contact</a
+          >
+          <label class="toggle-switch hover-target">
+            <input type="checkbox" id="themeToggle" />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <button
+          class="md:hidden w-10 h-10 flex items-center justify-center hover-target"
+          id="mobileMenuButton"
+        >
+          <i class="ri-menu-line text-2xl"></i>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        class="md:hidden hidden bg-white w-full absolute top-16 left-0 shadow-md"
+        id="mobileMenu"
+      >
+        <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+          <a
+            href="#work"
+            class="text-gray-700 hover:text-primary py-2 transition-colors duration-300"
+            >Work</a
+          >
+          <a
+            href="#about"
+            class="text-gray-700 hover:text-primary py-2 transition-colors duration-300"
+            >About</a
+          >
+          <a
+            href="#process"
+            class="text-gray-700 hover:text-primary py-2 transition-colors duration-300"
+            >Process</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-700 hover:text-primary py-2 transition-colors duration-300"
+            >Contact</a
+          >
+          <div class="flex items-center justify-between">
+            <span class="text-gray-700">Dark Mode</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="mobileThemeToggle" />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section
+      class="pt-24 sm:pt-20 md:pt-32 lg:pt-40 pb-12 sm:pb-16 md:pb-24 lg:pb-32 relative overflow-hidden"
+      style="background-image: url('https://readdy.ai/api/search-image?query=abstract%20minimalist%20design%20background%20with%20soft%20gradient%20in%20light%20blue%20and%20purple%2C%20professional%20modern%20aesthetic%2C%20clean%20and%20elegant%20design%2C%20suitable%20for%20product%20designer%20portfolio%20hero%20section%2C%20high%20quality%20professional&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center;"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/30"
+      ></div>
+      <div class="container mx-auto px-4 sm:px-6 relative z-10">
+        <div class="max-w-3xl">
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 animate-fadeInUp break-words sm:break-normal"
+          >
+            Hi, I'm Tanisha Rampersad
+          </h1>
+          <h2
+            class="text-xl sm:text-2xl md:text-3xl font-medium text-primary mb-6 animate-fadeInUp"
+            style="animation-delay: 0.2s;"
+          >
+            Product Designer & Frontend Developer
+          </h2>
+          <p
+            class="text-lg md:text-xl text-gray-700 mb-8 animate-fadeInUp max-w-2xl"
+            style="animation-delay: 0.4s;"
+          >
+            Blending strategy and design to turn user problems into polished
+            digital solutions.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-4 animate-fadeInUp"
+            style="animation-delay: 0.6s;"
+          >
+            <a
+              href="#work"
+              class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-primary/90 transition-colors duration-300 text-center whitespace-nowrap hover-target"
+              >View My Work</a
+            >
+            <a
+              href="#contact"
+              class="border-2 border-gray-300 text-gray-700 px-8 py-3 !rounded-button font-medium hover:border-primary hover:text-primary transition-colors duration-300 text-center whitespace-nowrap hover-target"
+              >Get In Touch</a
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute bottom-[2px] sm:bottom-8 md:bottom-12 left-[calc(50%-11px)] sm:left-[50%] transform -translate-x-1/2 animate-bounce"
+      >
+        <a
+          href="#work"
+          class="w-10 h-10 flex items-center justify-center text-primary hover-target"
+        >
+          <i class="ri-arrow-down-line text-2xl"></i>
+        </a>
+      </div>
+    </section>
+    <!-- Featured Work Section -->
+    <section id="work" class="py-20 bg-gray-50 section">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Featured Work
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            A selection of my recent projects showcasing my approach to product
+            design and development.
+          </p>
+        </div>
+        <div class="mb-10">
+          <div
+            class="flex flex-wrap justify-center gap-2 sm:gap-4"
+            id="filterButtons"
+          >
+            <button
+              data-filter="all"
+              class="filter-btn px-3 sm:px-6 py-2 !rounded-button bg-primary text-white font-medium whitespace-nowrap hover-target text-sm sm:text-base"
+            >
+              All Projects
+            </button>
+            <button
+              data-filter="product"
+              class="filter-btn px-3 sm:px-6 py-2 !rounded-button bg-white text-gray-700 font-medium whitespace-nowrap hover:bg-primary hover:text-white transition-colors duration-300 hover-target text-sm sm:text-base"
+            >
+              Product Design
+            </button>
+            <button
+              data-filter="development"
+              class="filter-btn px-3 sm:px-6 py-2 !rounded-button bg-white text-gray-700 font-medium whitespace-nowrap hover:bg-primary hover:text-white transition-colors duration-300 hover-target text-sm sm:text-base"
+            >
+              Development
+            </button>
+          </div>
+        </div>
+        <div
+          id="projectGrid"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- Flipkart Project -->
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 project-card hover-target"
+            data-category="product"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="https://static.readdy.ai/image/e2b6163c2afd3eb363d042d6f4403380/28188f9a8260d80d7025fcdb03d4f67d.png"
+                alt="Flipkart Checkout Flow"
+                class="w-full h-full object-cover object-top transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300 project-overlay"
+              >
+                <a
+                  href="https://dribbble.com/shots/26160057-Flipkart-Checkout-Flow-Case-Study?utm_source=Clipboard_Shot&utm_campaign=tanisha-rampersad&utm_content=Flipkart%20Checkout%20Flow%20Case%20Study&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=tanisha-rampersad&utm_content=Flipkart%20Checkout%20Flow%20Case%20Study&utm_medium=Social_Share"
+                  target="_blank"
+                  class="bg-white text-primary px-6 py-2 !rounded-button font-medium hover:bg-gray-100 transition-colors duration-300 whitespace-nowrap"
+                  >View on Dribbble</a
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold text-gray-900">
+                  Flipkart E-commerce
+                </h3>
+                <span
+                  class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >Product Design</span
+                >
+              </div>
+              <p class="text-gray-600 mb-4">
+                Redesigned the checkout flow to increase conversion rates.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">Conceptual Project</span>
+                <a
+                  href="https://readdy.ai/home/97a13180-2b15-4309-936c-4b6c5f38bf15/923e1006-a959-4031-8f78-2429cc063bc9"
+                  data-readdy="true"
+                  class="text-primary hover:text-primary/80 flex items-center gap-1 text-sm font-medium"
+                >
+                  See details
+                  <i class="ri-arrow-right-line"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project 1 -->
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 project-card hover-target"
+            data-category="development"
+          >
+            <div class="relative overflow-hidden h-64">
+              <iframe
+                src="https://drive.google.com/file/d/1AybKFhZ0WNNm3H3mY7qYHEhomKfCBZEp/preview"
+                class="w-full h-full object-cover"
+                allow="autoplay"
+              ></iframe>
+              <div
+                class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300 project-overlay"
+              >
+                <a
+                  href="https://drive.google.com/file/d/1AybKFhZ0WNNm3H3mY7qYHEhomKfCBZEp/view?usp=sharing"
+                  target="_blank"
+                  class="bg-white text-primary px-6 py-2 !rounded-button font-medium hover:bg-gray-100 transition-colors duration-300 whitespace-nowrap"
+                  >View Full Video</a
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold text-gray-900">
+                  Amaranth Spa Website
+                </h3>
+                <span
+                  class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >Development</span
+                >
+              </div>
+              <p class="text-gray-600 mb-4">
+                Rebuilt a spa website based in Thailand to help improve customer
+                retention.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">Conceptual Project</span>
+                <a
+                  href="https://github.com/TanishaRampersad/Amaranth-Spa"
+                  target="_blank"
+                  class="text-primary hover:text-primary/80 flex items-center gap-1 text-sm font-medium"
+                >
+                  View Github Code
+                  <i class="ri-github-line"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 project-card hover-target"
+            data-category="development"
+          >
+            <div class="relative overflow-hidden h-64">
+              <iframe
+                src="https://drive.google.com/file/d/1OAZMgJGZ4kbkvaVdctfN0tg8FcE0fYIh/preview"
+                class="w-full h-full object-cover"
+                allow="autoplay"
+              ></iframe>
+              <div
+                class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300 project-overlay"
+              >
+                <a
+                  href="https://drive.google.com/file/d/1cACHZZcpm1CavIhgIqjhL5aSfxa93I3u/view?usp=sharing"
+                  target="_blank"
+                  class="bg-white text-primary px-6 py-2 !rounded-button font-medium hover:bg-gray-100 transition-colors duration-300 whitespace-nowrap"
+                  >View Full Video</a
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold text-gray-900">
+                  Prussian & Co. E-commerce
+                </h3>
+                <span
+                  class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >Development</span
+                >
+              </div>
+              <p class="text-gray-600 mb-4">
+                Built a conceptual e-commerce website. I also explored backend
+                development for this project, including setting up APIs, server
+                routing, and product data handling.
+              </p>
+              <div class="space-y-2">
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-gray-500">Conceptual Project</span>
+                  <a
+                    href="https://drive.google.com/file/d/1OAZMgJGZ4kbkvaVdctfN0tg8FcE0fYIh/view?usp=sharing"
+                    target="_blank"
+                    class="text-primary hover:text-primary/80 flex items-center gap-1 text-sm font-medium"
+                  >
+                    View Backend Work
+                    <i class="ri-code-line"></i>
+                  </a>
+                </div>
+                <div class="flex justify-end">
+                  <a
+                    href="https://github.com/TanishaRampersad/React-shopping-cart"
+                    target="_blank"
+                    class="text-primary hover:text-primary/80 flex items-center gap-1 text-sm font-medium"
+                  >
+                    View Github Code
+                    <i class="ri-github-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div
+            class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 project-card hover-target"
+            data-category="product"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="https://static.readdy.ai/image/e2b6163c2afd3eb363d042d6f4403380/ab9f878590fb06e95912c09a6933b904.png"
+                alt="Nurdle SaaS Platform"
+                class="w-full h-full object-cover object-top transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300 project-overlay"
+              >
+                <a
+                  href="https://dribbble.com/shots/26158893-Nurdle-Saas-Landing-Page?utm_source=Clipboard_Shot&utm_campaign=tanisha-rampersad&utm_content=Nurdle%20(Saas)%20Landing%20Page&utm_medium=Social_Share"
+                  target="_blank"
+                  class="bg-white text-primary px-6 py-2 !rounded-button font-medium hover:bg-gray-100 transition-colors duration-300 whitespace-nowrap"
+                  >View on Dribbble</a
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold text-gray-900">
+                  Nurdle SaaS Platform
+                </h3>
+                <span
+                  class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                  >Product Design</span
+                >
+              </div>
+              <p class="text-gray-600 mb-4">
+                Created the first design proposal for a marketing landing page
+                using marketing principles to shape the narrative flow.
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">Product Designer</span>
+                <a
+                  href="https://readdy.ai/home/97a13180-2b15-4309-936c-4b6c5f38bf15/923e1006-a959-4031-8f78-2429cc063bc9"
+                  data-readdy="true"
+                  class="text-primary hover:text-primary/80 flex items-center gap-1 text-sm font-medium"
+                >
+                  See details
+                  <i class="ri-arrow-right-line"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50 section">
+      <div class="container mx-auto px-6">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
+        >
+          <div>
+            <img
+              src="https://static.readdy.ai/image/e2b6163c2afd3eb363d042d6f4403380/cdcf47f812816c9756474a45c1d4f8cf.jfif"
+              alt="Tanisha Rampersad"
+              class="rounded-xl shadow-lg w-full h-auto"
+            />
+          </div>
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              About Me
+            </h2>
+            <p class="text-lg text-gray-700 mb-6">
+              I'm a product designer with a foundation in frontend development,
+              with experience in crafting sustainable, user-centered digital
+              experiences. I recently led the design of a cost estimation
+              marketing platform, balancing modern, brand-aligned visual design
+              with clear business objectives.
+            </p>
+            <p class="text-lg text-gray-700 mb-8">
+              My approach is grounded in thoughtful research, cross-functional
+              collaboration, and scalable design systems. I'm driven by a
+              commitment to designing solutions that not only serve users but
+              also support long-term product growth and company vision.
+            </p>
+            <div class="mb-8">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">
+                Professional Experience
+              </h3>
+              <div class="space-y-6">
+                <div class="border-l-4 border-primary pl-4">
+                  <h4 class="font-bold text-gray-900">Product Design Intern</h4>
+                  <p class="text-gray-600">
+                    Realm Digital • Feb 2025 - May 2025
+                  </p>
+                  <p class="text-gray-700 mt-2">
+                    I worked on creating a marketing site (pre-MVP) for a cost
+                    estimation tool called Nurdle, with a focus on aligning
+                    product capabilities to real industry challenges. I have
+                    iterated on the design based on team feedback, continuously
+                    refining layout, visual hierarchy, and copy. I applied
+                    proven marketing frameworks such as PAS and AIDA to
+                    structure page content and user flows, ensuring that the
+                    messaging was both compelling and conversion-oriented.
+                  </p>
+                  <ul
+                    class="list-disc list-inside text-gray-700 mt-4 space-y-2"
+                  >
+                    <li>Conducted competitor analysis</li>
+                    <li>Defined user needs, problems and goals</li>
+                    <li>
+                      Collaborated with team members to gather feedback based on
+                      the company's goals and to understand their target market
+                    </li>
+                    <li>
+                      Created user personas, research, empathy mapping, affinity
+                      mapping, information architecture, design system
+                    </li>
+                    <li>Journey mapping</li>
+                    <li>
+                      Created wireframes, prototypes and mockups using Figma
+                    </li>
+                    <li>
+                      Combined users needs and company goals into a
+                      high-fidelity design
+                    </li>
+                  </ul>
+                </div>
+                <div class="border-l-4 border-primary pl-4">
+                  <h4 class="font-bold text-gray-900">Clerical Assistant</h4>
+                  <p class="text-gray-600">WSP Africa • Nov 2021 - Oct 2022</p>
+                  <p class="text-gray-700 mt-2">
+                    Creating project folders using the Easy Directory Creator
+                    Software. Conducting Internal Audits. Updating and managing
+                    CV's.
+                  </p>
+                </div>
+                <div class="border-l-4 border-primary pl-4">
+                  <h4 class="font-bold text-gray-900">
+                    Human Resource Clerical Assistant
+                  </h4>
+                  <p class="text-gray-600">
+                    WSP Africa • November 2021 - April 2022
+                  </p>
+                  <p class="text-gray-700 mt-2">
+                    Preparing and amending HR documents. Forming and maintaining
+                    employee records. Drafting contracts for clients. Updating
+                    the internal database.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mb-8">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">
+                Education & Certifications
+              </h3>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div
+                    class="w-8 h-8 flex items-center justify-center mr-3 mt-1"
+                  >
+                    <i class="ri-award-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900">
+                      Frontend Development
+                    </h4>
+                    <p class="text-gray-600">Codecademy • 2023 - 2024</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-8 h-8 flex items-center justify-center mr-3 mt-1"
+                  >
+                    <i class="ri-award-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900">Product Design</h4>
+                    <p class="text-gray-600">Uxcel • 2024</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-8 h-8 flex items-center justify-center mr-3 mt-1"
+                  >
+                    <i class="ri-graduation-cap-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900">
+                      Diploma in Tourism Management
+                    </h4>
+                    <p class="text-gray-600">2016 - 2019</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-8 h-8 flex items-center justify-center mr-3 mt-1"
+                  >
+                    <i class="ri-graduation-cap-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900">Matric Certificate</h4>
+                    <p class="text-gray-600">Eden College • 2014</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a
+              href="https://drive.google.com/uc?export=download&id=1HzU4tfYazBY6zw-nqItD3jjUQczkkSGB"
+              class="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-primary/90 transition-colors duration-300 whitespace-nowrap hover-target"
+            >
+              Download Resume
+              <i class="ri-download-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills Section -->
+    <section class="py-20 bg-white section">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Skills & Expertise
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            My toolkit of design and development skills that I bring to every
+            project.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Design Skills</h3>
+            <div class="space-y-6">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700"
+                    >User Experience (UX) Design</span
+                  >
+                  <span class="text-gray-500">95%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-progress-bar" style="width: 95%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700"
+                    >User Interface (UI) Design</span
+                  >
+                  <span class="text-gray-500">90%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-progress-bar" style="width: 90%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700">User Research</span>
+                  <span class="text-gray-500">85%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-progress-bar" style="width: 85%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700">Prototyping</span>
+                  <span class="text-gray-500">90%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-progress-bar" style="width: 90%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700">Design Systems</span>
+                  <span class="text-gray-500">85%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-progress-bar" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mt-12 mb-6">
+              Design Tools
+            </h3>
+            <div class="flex flex-wrap gap-4">
+              <div
+                class="bg-gray-100 px-4 py-2 rounded-full text-gray-700 flex items-center gap-2"
+              >
+                <i class="ri-palette-line"></i>
+                <span>Figma</span>
+              </div>
+              <div
+                class="bg-gray-100 px-4 py-2 rounded-full text-gray-700 flex items-center gap-2"
+              >
+                <i class="ri-code-line"></i>
+                <span>Visual Studio Code</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">
+              Development Skills
+            </h3>
+            <div class="space-y-6">
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700">HTML/CSS</span>
+                  <span class="text-gray-500">95%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-progress-bar" style="width: 95%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700">JavaScript</span>
+                  <span class="text-gray-500">70%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-progress-bar" style="width: 70%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700">React</span>
+                  <span class="text-gray-500">75%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-progress-bar" style="width: 75%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700"
+                    >Responsive Design</span
+                  >
+                  <span class="text-gray-500">80%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-progress-bar" style="width: 80%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-2">
+                  <span class="font-medium text-gray-700"
+                    >Version Control (Git)</span
+                  >
+                  <span class="text-gray-500">75%</span>
+                </div>
+                <div class="skill-progress">
+                  <div class="skill-progress-bar" style="width: 75%"></div>
+                </div>
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mt-12 mb-6">
+              Soft Skills
+            </h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="ri-team-line text-primary"></i>
+                </div>
+                <span class="font-medium text-gray-700">Collaboration</span>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="ri-chat-1-line text-primary"></i>
+                </div>
+                <span class="font-medium text-gray-700">Communication</span>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="ri-lightbulb-line text-primary"></i>
+                </div>
+                <span class="font-medium text-gray-700">Problem Solving</span>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="ri-time-line text-primary"></i>
+                </div>
+                <span class="font-medium text-gray-700">Time Management</span>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="ri-empathize-line text-primary"></i>
+                </div>
+                <span class="font-medium text-gray-700">Empathy</span>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-sm flex items-center">
+                <div
+                  class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="ri-presentation-line text-primary"></i>
+                </div>
+                <span class="font-medium text-gray-700">Presentation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Design Process Section -->
+    <section id="process" class="py-20 bg-gray-50 section">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            My Design Process
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            A systematic approach that guides my work from initial concept to
+            final implementation.
+          </p>
+        </div>
+        <div class="relative">
+          <div class="grid grid-cols-1 md:grid-cols-6 gap-8">
+            <div class="relative text-center process-step">
+              <div
+                class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="ri-search-line text-primary text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Discover</h3>
+              <p class="text-gray-600">
+                Understanding user needs, business goals, and market context
+              </p>
+            </div>
+            <div class="relative text-center process-step">
+              <div
+                class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="ri-mind-map text-primary text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Define</h3>
+              <p class="text-gray-600">
+                Framing the right problems with clarity and focus
+              </p>
+            </div>
+            <div class="relative text-center process-step">
+              <div
+                class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="ri-lightbulb-line text-primary text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Ideate</h3>
+              <p class="text-gray-600">
+                Exploring creative possibilities to solve user challenges
+              </p>
+            </div>
+            <div class="relative text-center process-step">
+              <div
+                class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="ri-layout-line text-primary text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Design & Prototype
+              </h3>
+              <p class="text-gray-600">
+                Creating realistic mockups to bring ideas to life
+              </p>
+            </div>
+            <div class="relative text-center process-step">
+              <div
+                class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="ri-test-tube-line text-primary text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Test & Iterate
+              </h3>
+              <p class="text-gray-600">
+                Validating with users, refining based on feedback loops
+              </p>
+            </div>
+            <div class="relative text-center process-step">
+              <div
+                class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="ri-rocket-line text-primary text-2xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Launch & Learn
+              </h3>
+              <p class="text-gray-600">
+                Delivering solutions and monitoring real-world impact
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-20 bg-white p-8 rounded-xl shadow-md">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">
+            Process in Action: Nurdle Saas Case Study
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <div class="mb-6">
+                <h4
+                  class="text-lg font-bold text-gray-900 mb-2 flex items-center"
+                >
+                  <span
+                    class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-2"
+                    >1</span
+                  >
+                  Research Phase
+                </h4>
+                <p class="text-gray-700 ml-10">
+                  Defined the target audience, features and marketing
+                  frameworks. Conducted competitor analysis and identified
+                  several industry trends.
+                </p>
+              </div>
+              <div class="mb-6">
+                <h4
+                  class="text-lg font-bold text-gray-900 mb-2 flex items-center"
+                >
+                  <span
+                    class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-2"
+                    >2</span
+                  >
+                  Define Phase
+                </h4>
+                <p class="text-gray-700 ml-10">
+                  Defined the user persona, empathy mapping, affinity mapping
+                  and problem statement.
+                </p>
+              </div>
+              <div class="mb-6">
+                <h4
+                  class="text-lg font-bold text-gray-900 mb-2 flex items-center"
+                >
+                  <span
+                    class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-2"
+                    >3</span
+                  >
+                  Ideate Phase
+                </h4>
+                <p class="text-gray-700 ml-10">
+                  Used information architecture to determine what needs to be
+                  added. Developed mid-fidelity wireframes.
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="mb-6">
+                <h4
+                  class="text-lg font-bold text-gray-900 mb-2 flex items-center"
+                >
+                  <span
+                    class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-2"
+                    >4</span
+                  >
+                  Design Phase
+                </h4>
+                <p class="text-gray-700 ml-10">
+                  I defined the typography and colour palette to align with the
+                  brand's tone and ensure accessibility. High-fidelity
+                  wireframes and an interactive prototype brought the interface
+                  to life, allowing for realistic interaction flows.
+                </p>
+              </div>
+              <div class="mb-6">
+                <h4
+                  class="text-lg font-bold text-gray-900 mb-2 flex items-center"
+                >
+                  <span
+                    class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-2"
+                    >5</span
+                  >
+                  Recollect Phase
+                </h4>
+                <p class="text-gray-700 ml-10">
+                  I reflected on the project's evolution from problem
+                  identification to fully realised interface. Recollecting key
+                  design decisions helped surface how each choice, whether in
+                  layout, typography, or interaction contributed to user clarity
+                  and business goals. I also revisited how marketing principles,
+                  like AIDA and PAS, shaped the narrative flow. This phase
+                  served as both a moment of evaluation and learning,
+                  highlighting what worked, what could be improved.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 text-center">
+            <a
+              href="https://dribbble.com/shots/26158893-Nurdle-Saas-Landing-Page?utm_source=Clipboard_Shot&utm_campaign=tanisha-rampersad&utm_content=Nurdle%20(Saas)%20Landing%20Page&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=tanisha-rampersad&utm_content=Nurdle%20(Saas)%20Landing%20Page&utm_medium=Social_Share"
+              target="_blank"
+              class="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium hover-target"
+            >
+              View Full Case Study
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white section">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Get In Touch
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Interested in working together? Feel free to reach out for
+            collaborations or just a friendly hello.
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-12"
+        >
+          <div class="lg:col-span-2">
+            <div class="bg-gray-50 p-8 rounded-xl h-full">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                Contact Information
+              </h3>
+              <div class="space-y-6">
+                <div
+                  class="flex items-start sm:justify-center md:justify-start"
+                >
+                  <div
+                    class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1"
+                  >
+                    <i class="ri-mail-line text-primary text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-900 mb-1">Email</h4>
+                    <a
+                      href="mailto:Tanisharampersad24@gmail.com"
+                      class="text-primary hover:text-primary/80 transition-colors duration-300"
+                      >Tanisharampersad24@gmail.com</a
+                    >
+                  </div>
+                </div>
+                <div
+                  class="flex items-start sm:justify-center md:justify-start"
+                >
+                  <div
+                    class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1"
+                  >
+                    <i class="ri-map-pin-line text-primary text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-900 mb-1">Location</h4>
+                    <p class="text-gray-600">Cape Town, South Africa</p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start sm:justify-center md:justify-start"
+                >
+                  <div
+                    class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1"
+                  >
+                    <i class="ri-time-line text-primary text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-900 mb-1">Availability</h4>
+                    <p class="text-gray-600">
+                      Open for freelance projects and full-time opportunities
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-10">
+                <h4 class="font-medium text-gray-900 mb-4">Connect with me</h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="https://www.linkedin.com/in/tanisha-rampersad-18269b14a"
+                    target="_blank"
+                    class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-colors duration-300 hover-target"
+                  >
+                    <i class="ri-linkedin-fill"></i>
+                  </a>
+                  <a
+                    href="https://dribbble.com/tanisha-rampersad"
+                    target="_blank"
+                    class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-colors duration-300 hover-target"
+                  >
+                    <i class="ri-dribbble-line"></i>
+                  </a>
+                  <a
+                    href="https://github.com/TanishaRampersad"
+                    target="_blank"
+                    class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-colors duration-300 hover-target"
+                  >
+                    <i class="ri-github-fill"></i>
+                  </a>
+                  <a
+                    href="https://www.behance.net/tanisharampers1"
+                    target="_blank"
+                    class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-700 hover:bg-primary hover:text-white transition-colors duration-300 hover-target"
+                  >
+                    <i class="ri-behance-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-3">
+            <form
+              action="https://readdy.ai/api/form/d1mh34tiu7h5n36hq2h0"
+              method="POST"
+              data-readdy-form
+              class="bg-white p-8 rounded-xl shadow-md"
+            >
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                Send me a Message
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="name" class="block text-gray-700 font-medium mb-2"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                    placeholder="Your email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-6">
+                <label
+                  for="subject"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  for="message"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary resize-none"
+                  placeholder="Your message"
+                  required
+                ></textarea>
+              </div>
+              <div class="flex items-start sm:items-center mb-6">
+                <input
+                  type="checkbox"
+                  id="consent"
+                  name="consent"
+                  required
+                  class="mr-2 w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary mt-1 sm:mt-0"
+                />
+                <label for="consent" class="text-gray-700"
+                  >I agree to the
+                  <span
+                    class="text-primary hover:text-primary/80 cursor-pointer"
+                    id="privacyPolicyBtn"
+                    >privacy policy</span
+                  >
+                  and
+                  <span
+                    class="text-primary hover:text-primary/80 cursor-pointer"
+                    id="termsBtn"
+                    >terms of service</span
+                  ></label
+                >
+                <!-- Privacy & Terms Modal -->
+                <div
+                  id="policyModal"
+                  class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center"
+                >
+                  <div
+                    class="bg-white rounded-xl max-w-2xl w-full max-h-[80vh] mx-4 relative"
+                  >
+                    <div
+                      class="p-6 border-b border-gray-200 flex justify-between items-center sticky top-0 bg-white rounded-t-xl"
+                    >
+                      <h3
+                        class="text-xl font-bold text-gray-900"
+                        id="modalTitle"
+                      >
+                        Privacy Policy
+                      </h3>
+                      <button
+                        id="closeModal"
+                        class="text-gray-500 hover:text-gray-700 transition-colors"
+                      >
+                        <i class="ri-close-line text-2xl"></i>
+                      </button>
+                    </div>
+                    <div class="p-6 overflow-y-auto max-h-[calc(80vh-80px)]">
+                      <!-- Privacy Policy Content -->
+                      <div id="privacyContent" class="space-y-6 hidden">
+                        <div class="space-y-4">
+                          <h4 class="text-lg font-bold text-gray-900">
+                            Data Collection and Usage
+                          </h4>
+                          <p class="text-gray-700">
+                            We collect information that you provide directly to
+                            us, including:
+                          </p>
+                          <ul
+                            class="list-disc list-inside text-gray-700 space-y-2"
+                          >
+                            <li>Name and contact information</li>
+                            <li>Messages and communication content</li>
+                            <li>Information about your device and browser</li>
+                          </ul>
+                        </div>
+                        <div class="space-y-4">
+                          <h4 class="text-lg font-bold text-gray-900">
+                            How We Use Your Information
+                          </h4>
+                          <p class="text-gray-700">
+                            We use the collected information to:
+                          </p>
+                          <ul
+                            class="list-disc list-inside text-gray-700 space-y-2"
+                          >
+                            <li>
+                              Respond to your inquiries and communications
+                            </li>
+                            <li>Improve our services and user experience</li>
+                            <li>Send relevant updates and notifications</li>
+                          </ul>
+                        </div>
+                        <div class="space-y-4">
+                          <h4 class="text-lg font-bold text-gray-900">
+                            Data Protection
+                          </h4>
+                          <p class="text-gray-700">
+                            We implement appropriate security measures to
+                            protect your personal information from unauthorized
+                            access, alteration, or disclosure.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- Terms of Service Content -->
+                      <div id="termsContent" class="space-y-6 hidden">
+                        <div class="space-y-4">
+                          <h4 class="text-lg font-bold text-gray-900">
+                            Acceptance of Terms
+                          </h4>
+                          <p class="text-gray-700">
+                            By accessing and using this website, you accept and
+                            agree to be bound by these Terms of Service and our
+                            Privacy Policy.
+                          </p>
+                        </div>
+                        <div class="space-y-4">
+                          <h4 class="text-lg font-bold text-gray-900">
+                            Use of Services
+                          </h4>
+                          <ul
+                            class="list-disc list-inside text-gray-700 space-y-2"
+                          >
+                            <li>
+                              You agree to use our services for lawful purposes
+                              only
+                            </li>
+                            <li>
+                              You must not misuse or attempt to gain
+                              unauthorized access to our services
+                            </li>
+                            <li>
+                              We reserve the right to modify or terminate
+                              services at any time
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="space-y-4">
+                          <h4 class="text-lg font-bold text-gray-900">
+                            Intellectual Property
+                          </h4>
+                          <p class="text-gray-700">
+                            All content on this website is protected by
+                            copyright and other intellectual property rights.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-primary/90 transition-colors duration-300 whitespace-nowrap hover-target"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-gray-200">
+      <div class="container mx-auto px-6">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8"
+        >
+          <div class="md:col-span-2">
+            <a
+              href="#"
+              class="text-2xl font-['Pacifico'] text-primary mb-4 inline-block hover-target"
+              >Tanisha</a
+            >
+            <p class="text-gray-600 mb-6 max-w-md">
+              Product designer and frontend developer creating intuitive digital
+              experiences that solve real problems.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="https://www.linkedin.com/in/tanisha-rampersad-18269b14a"
+                target="_blank"
+                class="text-gray-500 hover:text-primary transition-colors duration-300 hover-target"
+              >
+                <i class="ri-linkedin-fill text-lg"></i>
+              </a>
+              <a
+                href="https://dribbble.com/tanisha-rampersad"
+                target="_blank"
+                class="text-gray-500 hover:text-primary transition-colors duration-300 hover-target"
+              >
+                <i class="ri-dribbble-line text-lg"></i>
+              </a>
+              <a
+                href="https://github.com/TanishaRampersad"
+                target="_blank"
+                class="text-gray-500 hover:text-primary transition-colors duration-300 hover-target"
+              >
+                <i class="ri-github-fill text-lg"></i>
+              </a>
+              <a
+                href="https://www.behance.net/tanisharampers1"
+                target="_blank"
+                class="text-gray-500 hover:text-primary transition-colors duration-300 hover-target"
+              >
+                <i class="ri-behance-fill text-lg"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-primary transition-colors duration-300 hover-target"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#work"
+                  class="text-gray-600 hover:text-primary transition-colors duration-300 hover-target"
+                  >Work</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-600 hover:text-primary transition-colors duration-300 hover-target"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#process"
+                  class="text-gray-600 hover:text-primary transition-colors duration-300 hover-target"
+                  >Process</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-600 hover:text-primary transition-colors duration-300 hover-target"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 mb-4">Resources</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="https://dribbble.com/tanisha-rampersad"
+                  target="_blank"
+                  class="text-gray-600 hover:text-primary transition-colors duration-300 hover-target"
+                  >Case Studies</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-500 mb-4 md:mb-0">
+            © 2025 Tanisha. All rights reserved.
+          </p>
+          <p class="text-gray-500">Last updated: July 1, 2025</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Back to top button -->
+    <button
+      id="backToTop"
+      class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90 hover-target"
+    >
+      <i class="ri-arrow-up-line text-xl"></i>
+    </button>
+    <script id="mobileMenuScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobileMenuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+          if (mobileMenu.classList.contains("hidden")) {
+            mobileMenuButton.innerHTML = '<i class="ri-menu-line text-2xl"></i>';
+          } else {
+            mobileMenuButton.innerHTML = '<i class="ri-close-line text-2xl"></i>';
+          }
+        });
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+            mobileMenuButton.innerHTML = '<i class="ri-menu-line text-2xl"></i>';
+          });
+        });
+      });
+    </script>
+    <script id="themeToggleScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const themeToggle = document.getElementById("themeToggle");
+        const mobileThemeToggle = document.getElementById("mobileThemeToggle");
+        const body = document.body;
+        // Add smooth transition styles
+        const style = document.createElement("style");
+        style.textContent = `
+      * {
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+      }
+      .toggle-slider {
+      transition: background-color 0.4s ease !important;
+      }
+      .toggle-slider:before {
+      transition: transform 0.4s ease, background-color 0.4s ease !important;
+      }
+      `;
+        document.head.appendChild(style);
+        function setTheme(isDark) {
+          if (isDark) {
+            body.classList.add("dark");
+            body.style.backgroundColor = "#0f172a";
+            body.style.color = "#f1f5f9";
+            // Update sections
+            document.querySelectorAll("section").forEach((section) => {
+              if (section.classList.contains("bg-gray-50")) {
+                section.style.backgroundColor = "#1e293b";
+              } else if (section.classList.contains("bg-white")) {
+                section.style.backgroundColor = "#0f172a";
+              }
+            });
+            // Update navigation
+            const nav = document.querySelector("nav");
+            if (nav) {
+              nav.style.backgroundColor = "rgba(15, 23, 42, 0.95)";
+              nav.style.color = "#f1f5f9";
+              nav.style.borderColor = "#334155";
+            }
+            // Update cards and white backgrounds
+            document
+              .querySelectorAll(".bg-white, .project-card")
+              .forEach((element) => {
+                element.style.backgroundColor = "#1e293b";
+                element.style.color = "#f1f5f9";
+              });
+            // Update gray backgrounds
+            document
+              .querySelectorAll(".bg-gray-50, .bg-gray-100")
+              .forEach((element) => {
+                element.style.backgroundColor = "#334155";
+                element.style.color = "#f1f5f9";
+              });
+            // Update text colors
+            document.querySelectorAll(".text-gray-900").forEach((element) => {
+              // Keep the main heading (name) black in dark mode
+              if (
+                element.tagName === "H1" &&
+                element.textContent.includes("Tanisha Rampersad")
+              ) {
+                element.style.color = "#000000";
+              } else {
+                element.style.color = "#f1f5f9";
+              }
+            });
+            document.querySelectorAll(".text-gray-700").forEach((element) => {
+              // Make the description text and "Get In Touch" button text dark grey
+              if (
+                element.textContent.includes("Blending strategy and design") ||
+                (element.tagName === "A" &&
+                  element.textContent.includes("Get In Touch"))
+              ) {
+                element.style.color = "#4a5568";
+              } else {
+                element.style.color = "#cbd5e1";
+              }
+            });
+            document.querySelectorAll(".text-gray-600").forEach((element) => {
+              element.style.color = "#94a3b8";
+            });
+            document.querySelectorAll(".text-gray-500").forEach((element) => {
+              element.style.color = "#64748b";
+            });
+            // Update form inputs
+            document.querySelectorAll("input, textarea").forEach((element) => {
+              element.style.backgroundColor = "#334155";
+              element.style.color = "#f1f5f9";
+              element.style.borderColor = "#475569";
+            });
+            // Update buttons and interactive elements
+            document
+              .querySelectorAll("button:not(.bg-primary)")
+              .forEach((element) => {
+                if (element.classList.contains("bg-white")) {
+                  element.style.backgroundColor = "#334155";
+                  element.style.color = "#f1f5f9";
+                }
+              });
+            // Update footer
+            const footer = document.querySelector("footer");
+            if (footer) {
+              footer.style.backgroundColor = "#0f172a";
+              footer.style.borderColor = "#334155";
+            }
+            // Update borders
+            document
+              .querySelectorAll(".border-gray-200, .border-gray-300")
+              .forEach((element) => {
+                element.style.borderColor = "#475569";
+              });
+            // Update shadows
+            document
+              .querySelectorAll(".shadow-md, .shadow-lg, .shadow-sm")
+              .forEach((element) => {
+                element.style.boxShadow =
+                  "0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2)";
+              });
+          } else {
+            body.classList.remove("dark");
+            body.style.backgroundColor = "";
+            body.style.color = "";
+            // Reset sections
+            document.querySelectorAll("section").forEach((section) => {
+              section.style.backgroundColor = "";
+            });
+            // Reset navigation
+            const nav = document.querySelector("nav");
+            if (nav) {
+              nav.style.backgroundColor = "";
+              nav.style.color = "";
+              nav.style.borderColor = "";
+            }
+            // Reset all elements
+            document.querySelectorAll("*").forEach((element) => {
+              if (
+                element.style.backgroundColor &&
+                !element.classList.contains("bg-primary") &&
+                !element.classList.contains("bg-secondary")
+              ) {
+                element.style.backgroundColor = "";
+              }
+              if (
+                element.style.color &&
+                !element.classList.contains("text-primary") &&
+                !element.classList.contains("text-white")
+              ) {
+                element.style.color = "";
+              }
+              if (element.style.borderColor) {
+                element.style.borderColor = "";
+              }
+              if (element.style.boxShadow) {
+                element.style.boxShadow = "";
+              }
+            });
+          }
+          localStorage.setItem("darkMode", isDark);
+        }
+        // Load saved theme
+        const savedTheme = localStorage.getItem("darkMode") === "true";
+        if (themeToggle) themeToggle.checked = savedTheme;
+        if (mobileThemeToggle) mobileThemeToggle.checked = savedTheme;
+        setTheme(savedTheme);
+        // Theme toggle event listeners
+        if (themeToggle) {
+          themeToggle.addEventListener("change", function () {
+            setTheme(this.checked);
+            if (mobileThemeToggle) mobileThemeToggle.checked = this.checked;
+          });
+        }
+        if (mobileThemeToggle) {
+          mobileThemeToggle.addEventListener("change", function () {
+            setTheme(this.checked);
+            if (themeToggle) themeToggle.checked = this.checked;
+          });
+        }
+        // Also add click event listeners to the toggle slider spans for better UX
+        const toggleSliders = document.querySelectorAll(".toggle-slider");
+        toggleSliders.forEach((slider) => {
+          slider.addEventListener("click", function () {
+            const checkbox = this.previousElementSibling;
+            if (checkbox && checkbox.type === "checkbox") {
+              checkbox.checked = !checkbox.checked;
+              checkbox.dispatchEvent(new Event("change"));
+            }
+          });
+        });
+      });
+    </script>
+    <script id="customCursorScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const cursorDot = document.querySelector(".cursor-dot");
+        const cursorOutline = document.querySelector(".cursor-outline");
+        if (window.innerWidth > 768) {
+          window.addEventListener("mousemove", function (e) {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+            cursorOutline.style.left = `${posX}px`;
+            cursorOutline.style.top = `${posY}px`;
+          });
+        }
+      });
+    </script>
+    <script id="scrollAnimationScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const backToTopButton = document.getElementById("backToTop");
+        const sections = document.querySelectorAll(".section");
+        // Intersection Observer for sections
+        const sectionObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
+        sections.forEach((section) => {
+          sectionObserver.observe(section);
+        });
+        // Back to top button
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 500) {
+            backToTopButton.classList.remove("opacity-0", "invisible");
+            backToTopButton.classList.add("opacity-100", "visible");
+          } else {
+            backToTopButton.classList.remove("opacity-100", "visible");
+            backToTopButton.classList.add("opacity-0", "invisible");
+          }
+        });
+        backToTopButton.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+    <script id="formValidationScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.querySelector(
+          'form[action="https://readdy.ai/api/form/d1mh34tiu7h5n36hq2h0"]',
+        );
+        const policyModal = document.getElementById("policyModal");
+        const privacyContent = document.getElementById("privacyContent");
+        const termsContent = document.getElementById("termsContent");
+        const modalTitle = document.getElementById("modalTitle");
+        const closeModal = document.getElementById("closeModal");
+        const privacyPolicyBtn = document.getElementById("privacyPolicyBtn");
+        const termsBtn = document.getElementById("termsBtn");
+        function showModal(content, title) {
+          modalTitle.textContent = title;
+          privacyContent.classList.add("hidden");
+          termsContent.classList.add("hidden");
+          content.classList.remove("hidden");
+          policyModal.classList.remove("hidden");
+          document.body.style.overflow = "hidden";
+        }
+        function hideModal() {
+          policyModal.classList.add("hidden");
+          document.body.style.overflow = "";
+        }
+        privacyPolicyBtn.addEventListener("click", () =>
+          showModal(privacyContent, "Privacy Policy"),
+        );
+        termsBtn.addEventListener("click", () =>
+          showModal(termsContent, "Terms of Service"),
+        );
+        closeModal.addEventListener("click", hideModal);
+        policyModal.addEventListener("click", (e) => {
+          if (e.target === policyModal) {
+            hideModal();
+          }
+        });
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && !policyModal.classList.contains("hidden")) {
+            hideModal();
+          }
+        });
+        if (contactForm) {
+          contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const nameInput = document.getElementById("name");
+            const emailInput = document.getElementById("email");
+            const subjectInput = document.getElementById("subject");
+            const messageInput = document.getElementById("message");
+            const consentCheckbox = document.getElementById("consent");
+            let isValid = true;
+            // Simple validation
+            if (!nameInput.value.trim()) {
+              nameInput.classList.add("border-red-500");
+              isValid = false;
+            } else {
+              nameInput.classList.remove("border-red-500");
+            }
+            if (!emailInput.value.trim() || !emailInput.value.includes("@")) {
+              emailInput.classList.add("border-red-500");
+              isValid = false;
+            } else {
+              emailInput.classList.remove("border-red-500");
+            }
+            if (!subjectInput.value.trim()) {
+              subjectInput.classList.add("border-red-500");
+              isValid = false;
+            } else {
+              subjectInput.classList.remove("border-red-500");
+            }
+            if (!messageInput.value.trim()) {
+              messageInput.classList.add("border-red-500");
+              isValid = false;
+            } else {
+              messageInput.classList.remove("border-red-500");
+            }
+            if (!consentCheckbox.checked) {
+              consentCheckbox.nextElementSibling.classList.add("border-red-500");
+              isValid = false;
+            } else {
+              consentCheckbox.nextElementSibling.classList.remove("border-red-500");
+            }
+            if (isValid) {
+              const submitButton = contactForm.querySelector('button[type="submit"]');
+              submitButton.innerHTML = "Sending...";
+              submitButton.disabled = true;
+              const formData = new FormData(contactForm);
+              const data = new URLSearchParams();
+              for (const pair of formData.entries()) {
+                data.append(pair[0], pair[1]);
+              }
+              fetch("https://readdy.ai/api/form/d1mh34tiu7h5n36hq2h0", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: data,
+              })
+                .then((response) => {
+                  if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                  }
+                  submitButton.innerHTML = "Message Sent!";
+                  submitButton.classList.remove("bg-primary");
+                  submitButton.classList.add("bg-green-500");
+                  contactForm.reset();
+                  setTimeout(() => {
+                    submitButton.innerHTML = "Send Message";
+                    submitButton.disabled = false;
+                    submitButton.classList.remove("bg-green-500");
+                    submitButton.classList.add("bg-primary");
+                  }, 3000);
+                })
+                .catch((error) => {
+                  submitButton.innerHTML = "Error, please try again";
+                  submitButton.classList.add("bg-red-500");
+                  submitButton.disabled = false;
+                  setTimeout(() => {
+                    submitButton.innerHTML = "Send Message";
+                    submitButton.classList.remove("bg-red-500");
+                    submitButton.classList.add("bg-primary");
+                  }, 3000);
+                });
+            }
+          });
+        }
+      });
+    </script>
+    <script id="projectFilterScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.getElementById("filterButtons");
+        const projectGrid = document.getElementById("projectGrid");
+        const projects = projectGrid.querySelectorAll(".project-card");
+        filterButtons.addEventListener("click", function (e) {
+          if (!e.target.classList.contains("filter-btn")) return;
+          const filterValue = e.target.getAttribute("data-filter");
+          // Update button styles
+          filterButtons.querySelectorAll(".filter-btn").forEach((btn) => {
+            btn.classList.remove("bg-primary", "text-white", "hover:bg-gray-100");
+            btn.classList.add(
+              "bg-white",
+              "text-gray-700",
+              "hover:bg-primary",
+              "hover:text-white",
+            );
+          });
+          e.target.classList.remove(
+            "bg-white",
+            "text-gray-700",
+            "hover:bg-gray-100",
+            "hover:bg-primary",
+            "hover:text-white",
+          );
+          e.target.classList.add("bg-primary", "text-white");
+          // Filter projects
+          projects.forEach((project) => {
+            if (
+              filterValue === "all" ||
+              project.getAttribute("data-category") === filterValue
+            ) {
+              project.style.display = "";
+              project.style.opacity = "1";
+              project.style.transform = "scale(1)";
+            } else {
+              project.style.opacity = "0";
+              project.style.transform = "scale(0.8)";
+              setTimeout(() => {
+                project.style.display = "none";
+              }, 300);
+            }
+          });
+        });
+      });
+    </script>
+    <script id="skillAnimationScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const skillBars = document.querySelectorAll(".skill-progress-bar");
+        const skillObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.width =
+                  entry.target.parentElement.previousElementSibling.lastElementChild.textContent;
+              }
+            });
+          },
+          { threshold: 0.5 },
+        );
+        skillBars.forEach((bar) => {
+          bar.style.width = "0%";
+          skillObserver.observe(bar);
+        });
+      });
+    </script>
+    <script id="checkboxScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach((checkbox) => {
+          checkbox.nextElementSibling.addEventListener("click", function () {
+            checkbox.checked = !checkbox.checked;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
